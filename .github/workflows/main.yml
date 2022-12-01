@@ -21,7 +21,7 @@ jobs:
       run: dotnet tool restore
 
     - name: Build and Test
-      run: dotnet  build Battleships
+      run: dotnet  Tetris
       
     - name: Test
       run: dotnet  cake --target=Test --test-run-name=Windows --configuration=Release
@@ -47,7 +47,7 @@ jobs:
   build:
     name: Build
     runs-on: windows-latest
-     env:
+    env:
       SONAR_SCANNER_VERSION: 4.6.1.2450 # Find the latest version in the "Windows" link on this page:
                                         # https://docs.sonarcloud.io/advanced-setup/ci-based-analysis/sonarscanner-cli/
       SONAR_SERVER_URL: "https://sonarcloud.io"
